@@ -23,7 +23,7 @@ public class TermX implements Comparable<TermX>,Addible<TermX> {
                 this.coef=1;
             else {
                 String sub = termstr.substring(0, i);
-                if (sub.equals('-'))
+                if (sub.equals("-"))
                     this.coef = -1;
                 else
                     this.coef = Integer.parseInt(sub);
