@@ -12,6 +12,7 @@ public class PolySLinkedList<T extends Comparable<T> & Addible<T>> extends Sorte
     {
         super(terms);
     }
+
     public PolySLinkedList(PolySLinkedList<T> polylist)
     {
         super(polylist);

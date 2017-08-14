@@ -1,6 +1,6 @@
 package LinkList.PolySLinkedList;
 
-public class TermX implements Comparable<TermX>,Addible<TermX> {
+public class TermX implements Comparable<TermX>,Addible<TermX>{
     protected  int coef,exp;
     public TermX(int coef,int exp)
     {

@@ -3,8 +3,8 @@ package LinkList.PolySLinkedList;
 import LinkList.SinglyLinkedList.Node;
 
 public class Polynomical {
-    private PolySLinkedList<TermX> list;
-
+    PolySLinkedList<TermX> list;
+    PolySLinkedList<TermXY> list1;
     public Polynomical()
     {
         this.list=new PolySLinkedList<TermX>();
