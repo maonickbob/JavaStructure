@@ -3,23 +3,23 @@ package LinkList.PolySLinkedList;
 import LinkList.SinglyLinkedList.Node;
 import LinkList.SortedSinglyLinkedList.SortedSinglyLinkedList;
 
-public class PolySLinkedList<T extends Comparable<T> & Addible<T>> extends SortedSinglyLinkedList<T>{
+public class PolySLinkedList<T extends Comparable<TermX> & Addible<TermX>> extends SortedSinglyLinkedList<TermX>{
     public PolySLinkedList()
     {
         super();
     }
-    public PolySLinkedList(T []terms)
+    public PolySLinkedList(TermX []terms)
     {
         super(terms);
     }
 
-    public PolySLinkedList(PolySLinkedList<T> polylist)
+    public PolySLinkedList(PolySLinkedList<TermX> polylist)
     {
         super(polylist);
     }
-    public void add(PolySLinkedList<T> polylist) {
-        Node<T> front = this.head, p = front.next;
-        Node<T> q = polylist.head.next;
+    public void add(PolySLinkedList<TermX> polylist) {
+        Node<TermX> front = this.head, p = front.next;
+        Node<TermX> q = polylist.head.next;
         while (p != null && q != null) {
             if (p.data.compareTo(q.data) == 0) {
                 p.data.add(q.data);
@@ -39,13 +39,13 @@ public class PolySLinkedList<T extends Comparable<T> & Addible<T>> extends Sorte
             }
             else
             {
-                front.next=new Node<T>(q.data,p);
+                front.next=new Node<TermX>(q.data,p);
                 q=q.next;
             }
         }
         while(q!=null)
         {
-            front.next=new Node<T>(q.data,null);
+            front.next=new Node<TermX>(q.data,null);
             front=front.next;
             q=q.next;
         }
